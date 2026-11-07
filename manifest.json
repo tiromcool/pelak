@@ -1,0 +1,17 @@
+{
+  "id": "./",
+  "name": "ابزار مدیریت پلاک رانندگان",
+  "short_name": "مدیریت پلاک",
+  "description": "مدیریت آفلاین مشتریان، رانندگان و پلاک خودروها",
+  "lang": "fa",
+  "dir": "rtl",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4f7fb",
+  "theme_color": "#2563eb",
+  "icons": [
+    {"src":"assets/icons/icon-192.svg","sizes":"192x192","type":"image/svg+xml","purpose":"any maskable"},
+    {"src":"assets/icons/icon-512.svg","sizes":"512x512","type":"image/svg+xml","purpose":"any maskable"}
+  ]
+}
