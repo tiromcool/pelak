@@ -97,3 +97,68 @@ body{
   .footer-info{flex-direction:column;gap:4px}
   .creator-credit{font-size:11px}
 }
+
+
+/* Dark theme */
+body.dark-mode{
+  color-scheme:dark;
+  --ink:#e7edf8;--muted:#9aa9bf;--line:#2b3850;--surface:#172235;
+  background:
+    radial-gradient(ellipse at 8% 0%,rgba(66,105,220,.16),transparent 32rem),
+    radial-gradient(ellipse at 96% 18%,rgba(24,145,132,.09),transparent 27rem),
+    #0d1524;
+  color:#e7edf8;
+}
+.dark-mode .topbar,.dark-mode .stat-card,.dark-mode .search-panel,
+.dark-mode .customer-card,.dark-mode .customer-head,.dark-mode .empty-state,
+.dark-mode .app-footer,.dark-mode .modal,.dark-mode .backup-card,
+.dark-mode .settings-list{
+  background:#172235;color:#e7edf8;border-color:#2b3850;
+  box-shadow:0 8px 26px rgba(0,0,0,.18);
+}
+.dark-mode .brand h1,.dark-mode .stat-card strong,.dark-mode .customer-title strong,
+.dark-mode .driver-info strong,.dark-mode .modal-head h2,.dark-mode .empty-state h3,
+.dark-mode .creator-credit strong{color:#edf3ff}
+.dark-mode .brand p,.dark-mode .stat-card span,.dark-mode .customer-title small,
+.dark-mode .search-meta,.dark-mode .footer-info,.dark-mode .creator-credit,
+.dark-mode .settings-note,.dark-mode .switch-row small,.dark-mode .width-row small{color:#9aa9bf}
+.dark-mode .btn-light,.dark-mode .mini-btn,.dark-mode .icon-btn{
+  background:#202e44;border-color:#34445f;color:#d8e2f2;
+}
+.dark-mode .btn-outline{background:#1d2d4d;border-color:#344d80;color:#b9ccff}
+.dark-mode .search-wrap input,.dark-mode .form-grid input,.dark-mode .form-grid select,
+.dark-mode .admin-toolbar input{background:#101b2c;color:#edf3ff;border-color:#35445d}
+.dark-mode .search-wrap input::placeholder{color:#7f90aa}
+.dark-mode .search-wrap kbd,.dark-mode .search-wrap button{background:#26354b;color:#bdc9dc;border-color:#3a4a63}
+.dark-mode .search-meta,.dark-mode .driver-list,.dark-mode .driver-row,
+.dark-mode .tabs,.dark-mode .switch-row,.dark-mode .width-row{border-color:#2b3850}
+.dark-mode .avatar{background:#24375c;color:#a9c0ff}
+.dark-mode .plate{background:#202d42;border-color:#3a4a63;color:#f1f5fb}
+.dark-mode .plate:hover{background:#263b60;border-color:#5476bf;color:#d9e5ff}
+.dark-mode .copy-btn{background:#223758;border-color:#3a5482;color:#c3d4ff}
+.dark-mode .copy-btn:hover{background:#2d4770}
+.dark-mode .admin-group{border-color:#2b3850}
+.dark-mode .admin-group-head{background:#202d42}
+.dark-mode .admin-driver{border-color:#2b3850}
+.dark-mode .backup-card{background:linear-gradient(155deg,#19263a,#152033)}
+.dark-mode .tabs{border-color:#2b3850}
+.dark-mode .tab{color:#9aa9bf}
+.dark-mode .tab.active{color:#9db6ff;border-color:#7898ff}
+.dark-mode .modal::backdrop{background:rgba(2,7,16,.78)}
+.dark-mode .form-grid label,.dark-mode .admin-group-head strong{color:#cbd6e7}
+.dark-mode .footer-info a{color:#aebfe0}
+.dark-mode .creator-credit{border-color:#2b3850}
+.dark-mode .copyright-mark{background:#26354b;color:#c3d0e5}
+.dark-mode .instagram-link{background:#302236;border-color:#583b56;color:#f0a5ce}
+.dark-mode .instagram-link:hover{background:#3a2940;border-color:#805176}
+.dark-mode .status-pill{background:#123126;border-color:#20543f;color:#8be0b2}
+.dark-mode .status-pill.offline{background:#392d17;border-color:#665020;color:#f3ca78}
+.dark-mode .stat-icon.blue{background:#22375d;color:#9eb9ff}
+.dark-mode .stat-icon.green{background:#183b32;color:#8cdbb5}
+.dark-mode .stat-icon.pale{background:#27354a;color:#b1bfd3}
+.dark-mode .empty-state{border-color:#3b4a63}
+.dark-mode .settings-list{background:#172235}
+.dark-mode .switch-row input,.dark-mode .width-row input{accent-color:#7898ff}
+.dark-mode .toast{background:#e6edf8;color:#132039}
+.dark-mode .btn-primary{background:linear-gradient(135deg,#527fff,#385fda);color:#fff}
+.dark-mode .btn-danger{background:#b83243;color:#fff}
