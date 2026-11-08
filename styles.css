@@ -162,3 +162,110 @@ body.dark-mode{
 .dark-mode .toast{background:#e6edf8;color:#132039}
 .dark-mode .btn-primary{background:linear-gradient(135deg,#527fff,#385fda);color:#fff}
 .dark-mode .btn-danger{background:#b83243;color:#fff}
+
+
+/* Customer groups: clear visual separation and layered customer/driver surfaces */
+.customer-list{gap:20px;align-items:start}
+.customer-card{
+  position:relative;
+  isolation:isolate;
+  border:1px solid #d6e1f3;
+  border-radius:19px 8px 19px 8px;
+  background:linear-gradient(145deg,#fff 0%,#f9fbff 100%);
+  box-shadow:0 5px 0 rgba(49,94,232,.055),0 12px 28px rgba(31,55,105,.09);
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
+}
+.customer-card::before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  inset:-1px;
+  border-radius:inherit;
+  pointer-events:none;
+  border:1px solid rgba(84,123,224,.18);
+  box-shadow:0 0 0 3px rgba(76,117,231,.035),0 0 22px rgba(76,117,231,.08);
+}
+.customer-card:hover{
+  transform:translateY(-3px);
+  border-color:#b9caf0;
+  box-shadow:0 7px 0 rgba(49,94,232,.07),0 17px 34px rgba(31,55,105,.13),0 0 20px rgba(76,117,231,.08);
+}
+.customer-head{
+  position:relative;
+  background:linear-gradient(110deg,#eaf1ff 0%,#f4f7ff 58%,#e8efff 100%);
+  border-bottom:1px solid #dce6fa;
+  padding:16px 18px;
+}
+.customer-head::after{
+  content:"";
+  position:absolute;
+  right:0;top:0;bottom:0;width:4px;
+  background:linear-gradient(180deg,#6e91f5,#315ee8);
+  border-radius:0 0 0 4px;
+}
+.customer-head:hover{background:linear-gradient(110deg,#e4edff,#f0f4ff 58%,#e2ebff)}
+.customer-head .avatar{
+  background:linear-gradient(145deg,#315ee8,#6489f4);
+  color:#fff;
+  box-shadow:0 4px 11px rgba(49,94,232,.22);
+}
+.customer-title strong{color:#20365f}
+.customer-title small{color:#637ba8}
+.driver-list{
+  background:linear-gradient(180deg,#f7f9fd 0%,#fff 100%);
+  border-top:0;
+  padding:10px 14px 13px;
+}
+.driver-row{
+  margin:5px 0;
+  padding:10px 11px;
+  border:1px solid #e8edf6;
+  border-radius:7px 13px 7px 13px;
+  background:rgba(255,255,255,.9);
+  box-shadow:0 2px 6px rgba(31,55,105,.035);
+}
+.driver-row:last-child{border:1px solid #e8edf6}
+.driver-info strong{color:#354b70}
+.customer-card.collapsed .customer-head{border-bottom:0}
+.customer-card.collapsed .customer-head::after{opacity:.75}
+.customer-card.collapsed{box-shadow:0 4px 0 rgba(49,94,232,.045),0 8px 20px rgba(31,55,105,.07)}
+/* Dark mode: richer customer header, calm driver rows, luminous group outline */
+.dark-mode .customer-card{
+  background:linear-gradient(145deg,#18263c 0%,#142033 100%);
+  border-color:#354a70;
+  box-shadow:0 5px 0 rgba(80,119,220,.12),0 12px 28px rgba(0,0,0,.28),0 0 18px rgba(70,108,205,.10);
+}
+.dark-mode .customer-card::before{
+  border-color:rgba(104,143,241,.25);
+  box-shadow:0 0 0 3px rgba(91,130,226,.07),0 0 25px rgba(76,117,231,.13);
+}
+.dark-mode .customer-card:hover{
+  border-color:#5876b2;
+  box-shadow:0 7px 0 rgba(80,119,220,.15),0 17px 34px rgba(0,0,0,.34),0 0 27px rgba(76,117,231,.17);
+}
+.dark-mode .customer-head{
+  background:linear-gradient(110deg,#263c62 0%,#213451 58%,#1c2d49 100%);
+  border-color:#3a527d;
+}
+.dark-mode .customer-head:hover{background:linear-gradient(110deg,#2d4772,#263c5e 58%,#203452)}
+.dark-mode .customer-head::after{background:linear-gradient(180deg,#9bb6ff,#5d83ed);box-shadow:0 0 12px rgba(115,151,255,.55)}
+.dark-mode .customer-head .avatar{
+  background:linear-gradient(145deg,#5278d8,#7899f2);
+  color:#fff;
+  box-shadow:0 4px 14px rgba(65,105,214,.35);
+}
+.dark-mode .customer-title strong{color:#f0f4ff}
+.dark-mode .customer-title small{color:#b2c5eb}
+.dark-mode .driver-list{background:linear-gradient(180deg,#121e30 0%,#152237 100%)}
+.dark-mode .driver-row,.dark-mode .driver-row:last-child{
+  background:linear-gradient(110deg,#1b2a40,#1a293e);
+  border-color:#30425e;
+  box-shadow:0 2px 8px rgba(0,0,0,.16);
+}
+.dark-mode .driver-info strong{color:#e0e9fa}
+.dark-mode .customer-card.collapsed{box-shadow:0 4px 0 rgba(80,119,220,.10),0 9px 22px rgba(0,0,0,.25),0 0 16px rgba(76,117,231,.08)}
+@media(max-width:520px){
+  .customer-list{gap:14px}
+  .driver-list{padding:8px 9px 10px}
+  .driver-row{padding:9px}
+}
